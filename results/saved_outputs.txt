@@ -1,0 +1,165 @@
+CELL 2
+{1: 'a', 2: 'b', 3: 'c', 4: 'd', 5: 'e', 6: 'f', 7: 'g', 8: 'h', 9: 'i', 10: 'j', 11: 'k', 12: 'l', 13: 'm', 14: 'n', 15: 'o', 16: 'p', 17: 'q', 18: 'r', 19: 's', 20: 't', 21: 'u', 22: 'v', 23: 'w', 24: 'x', 25: 'y', 26: 'z', 0: '.'}
+
+
+CELL 3
+torch.Size([182580, 3]) torch.Size([182580])
+torch.Size([22767, 3]) torch.Size([22767])
+torch.Size([22799, 3]) torch.Size([22799])
+
+
+CELL 5
+47551
+
+
+CELL 7
+      0/  10000: 3.3313
+
+
+CELL 8
+layer 2 (      Tanh): mean +0.000000, std 3.766654e-03
+layer 5 (      Tanh): mean -0.000000, std 3.346551e-03
+layer 8 (      Tanh): mean -0.000000, std 3.311855e-03
+layer 11 (      Tanh): mean -0.000000, std 3.226783e-03
+layer 14 (      Tanh): mean +0.000000, std 2.957410e-03
+
+
+CELL 9
+/tmp/ipykernel_433/3536293011.py:7: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  print('weight %10s | mean %+f | std %e | grad:data ratio %e' % (tuple(p.shape), t.mean(), t.std(), t.std() / p.std()))
+
+
+CELL 9
+weight   (27, 10) | mean -0.000000 | std 1.068115e-02 | grad:data ratio 1.061878e-02
+weight  (30, 100) | mean -0.000082 | std 8.626959e-03 | grad:data ratio 2.678408e-02
+weight (100, 100) | mean -0.000116 | std 6.581208e-03 | grad:data ratio 3.695688e-02
+weight (100, 100) | mean +0.000034 | std 6.159778e-03 | grad:data ratio 3.469939e-02
+weight (100, 100) | mean +0.000059 | std 5.997962e-03 | grad:data ratio 3.412175e-02
+weight (100, 100) | mean +0.000042 | std 5.372131e-03 | grad:data ratio 3.072614e-02
+weight  (100, 27) | mean +0.000252 | std 9.750326e-03 | grad:data ratio 5.078012e-02
+
+
+CELL 10
+layer 2 (      Tanh): mean +0.01, std 0.63, saturated: 4.56%
+layer 5 (      Tanh): mean +0.00, std 0.66, saturated: 4.66%
+layer 8 (      Tanh): mean -0.01, std 0.66, saturated: 4.38%
+layer 11 (      Tanh): mean -0.01, std 0.67, saturated: 3.75%
+layer 14 (      Tanh): mean +0.00, std 0.68, saturated: 2.88%
+
+
+CELL 12
+train 2.2346510887145996
+val 2.249162435531616
+
+
+CELL 14
+Largest difference between output scores: 2.980232238769531e-07
+Passed: the first context has matching predictions.
+
+
+CELL 15
+Batch 1: maximum difference = 0.00000000
+Batch 1: passed
+Batch 8: maximum difference = 0.00000143
+Batch 8: passed
+Batch 32: maximum difference = 0.00000143
+Batch 32: passed
+Batch 128: maximum difference = 0.00000095
+Batch 128: passed
+
+
+CELL 16
+Batch   1: 26.366 ms per 128 contexts
+Batch   8: 3.743 ms per 128 contexts
+Batch  32: 1.390 ms per 128 contexts
+Batch 128: 0.705 ms per 128 contexts
+
+
+CELL 17
+Batch   1 | 4,855 contexts/second | 1.00x speedup
+Batch   8 | 34,197 contexts/second | 7.04x speedup
+Batch  32 | 92,096 contexts/second | 18.97x speedup
+Batch 128 | 181,456 contexts/second | 37.38x speedup
+
+
+CELL 18
+
+Round 1: [1, 8, 32, 128]
+Batch   1: 25.985 ms
+Batch   8: 3.863 ms
+Batch  32: 2.296 ms
+Batch 128: 1.082 ms
+
+Round 2: [128, 32, 8, 1]
+Batch 128: 1.277 ms
+Batch  32: 1.389 ms
+Batch   8: 3.641 ms
+Batch   1: 26.299 ms
+
+Round 3: [32, 1, 128, 8]
+Batch  32: 1.371 ms
+Batch   1: 27.909 ms
+Batch 128: 0.768 ms
+Batch   8: 3.616 ms
+
+
+CELL 19
+
+Batch size 1
+<torch.utils.benchmark.utils.common.Measurement object at 0x7c707db07890>
+run_workload(b)
+  Median: 26.66 ms
+  IQR:    3.49 ms (25.10 to 28.59)
+  109 measurements, 1 runs per measurement, 1 thread
+  WARNING: Interquartile range is 13.1% of the median measurement.
+           This could indicate system fluctuation.
+
+Batch size 128
+<torch.utils.benchmark.utils.common.Measurement object at 0x7c70acfe7070>
+run_workload(b)
+  Median: 1.09 ms
+  IQR:    0.17 ms (1.03 to 1.20)
+  254 measurements, 10 runs per measurement, 1 thread
+  WARNING: Interquartile range is 15.4% of the median measurement.
+           This could indicate system fluctuation.
+
+
+CELL 20
+Visible logical CPUs: 2
+Default PyTorch CPU threads: 1
+
+
+CELL 21
+Original layer count: 17
+Folded layer count: 11
+
+
+CELL 22
+Batch   1: passed | maximum difference = 0.00000203
+Batch   8: passed | maximum difference = 0.00000191
+Batch  32: passed | maximum difference = 0.00000191
+Batch 128: passed | maximum difference = 0.00000191
+
+
+CELL 23
+
+Round 1: ['original', 'folded']
+Batch   1 | original: 78.866 ms | folded: 48.037 ms | speedup: 1.64x | IQR/median: 104.9% / 72.1%
+Batch   8 | original: 11.664 ms | folded: 2.712 ms | speedup: 4.30x | IQR/median: 100.4% / 12.3%
+Batch  32 | original: 1.317 ms | folded: 0.703 ms | speedup: 1.87x | IQR/median: 4.6% / 2.4%
+Batch 128 | original: 0.725 ms | folded: 0.556 ms | speedup: 1.30x | IQR/median: 2.4% / 44.0%
+
+Round 2: ['folded', 'original']
+Batch   1 | original: 23.470 ms | folded: 12.659 ms | speedup: 1.85x | IQR/median: 2.1% / 11.7%
+Batch   8 | original: 3.528 ms | folded: 1.456 ms | speedup: 2.42x | IQR/median: 2.6% / 1.5%
+Batch  32 | original: 1.311 ms | folded: 0.702 ms | speedup: 1.87x | IQR/median: 2.9% / 2.4%
+Batch 128 | original: 0.735 ms | folded: 0.738 ms | speedup: 1.00x | IQR/median: 37.1% / 5.9%
+
+
+CELL 24
+Validation contexts: 22767
+Original loss: 2.2491625373100748
+Folded loss: 2.2491625567463154
+Maximum logit difference: 2.86102294921875e-06
+Changed top-scoring predictions: 0

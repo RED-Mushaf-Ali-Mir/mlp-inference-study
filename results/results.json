@@ -1,0 +1,87 @@
+{
+  "provenance": "Transcribed from saved output of supplied notebook; not independently rerun. Values are rounded as printed.",
+  "source_sha256": "39c3eebd883c4277b13f1d06a63f0dcb84b9f6fb4c04aee59f20bc42c5287a4b",
+  "folding_timings": [
+    {
+      "round": 1,
+      "batch_size": 1,
+      "original_ms": 78.866,
+      "folded_ms": 48.037,
+      "reported_speedup": 1.64,
+      "original_iqr_percent": 104.9,
+      "folded_iqr_percent": 72.1
+    },
+    {
+      "round": 1,
+      "batch_size": 8,
+      "original_ms": 11.664,
+      "folded_ms": 2.712,
+      "reported_speedup": 4.3,
+      "original_iqr_percent": 100.4,
+      "folded_iqr_percent": 12.3
+    },
+    {
+      "round": 1,
+      "batch_size": 32,
+      "original_ms": 1.317,
+      "folded_ms": 0.703,
+      "reported_speedup": 1.87,
+      "original_iqr_percent": 4.6,
+      "folded_iqr_percent": 2.4
+    },
+    {
+      "round": 1,
+      "batch_size": 128,
+      "original_ms": 0.725,
+      "folded_ms": 0.556,
+      "reported_speedup": 1.3,
+      "original_iqr_percent": 2.4,
+      "folded_iqr_percent": 44.0
+    },
+    {
+      "round": 2,
+      "batch_size": 1,
+      "original_ms": 23.47,
+      "folded_ms": 12.659,
+      "reported_speedup": 1.85,
+      "original_iqr_percent": 2.1,
+      "folded_iqr_percent": 11.7
+    },
+    {
+      "round": 2,
+      "batch_size": 8,
+      "original_ms": 3.528,
+      "folded_ms": 1.456,
+      "reported_speedup": 2.42,
+      "original_iqr_percent": 2.6,
+      "folded_iqr_percent": 1.5
+    },
+    {
+      "round": 2,
+      "batch_size": 32,
+      "original_ms": 1.311,
+      "folded_ms": 0.702,
+      "reported_speedup": 1.87,
+      "original_iqr_percent": 2.9,
+      "folded_iqr_percent": 2.4
+    },
+    {
+      "round": 2,
+      "batch_size": 128,
+      "original_ms": 0.735,
+      "folded_ms": 0.738,
+      "reported_speedup": 1.0,
+      "original_iqr_percent": 37.1,
+      "folded_iqr_percent": 5.9
+    }
+  ],
+  "validation": {
+    "contexts": 22767,
+    "original_loss": 2.2491625373100748,
+    "folded_loss": 2.2491625567463154,
+    "maximum_absolute_logit_difference": 2.86102294921875e-06,
+    "changed_argmax_predictions": 0,
+    "rtol": 0.0001,
+    "atol": 1e-05
+  }
+}
