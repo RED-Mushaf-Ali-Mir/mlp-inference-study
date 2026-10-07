@@ -30,12 +30,7 @@ This is an educational implementation and performance investigation of a known t
 
 **Reproduction status:** code and saved outputs are available; this package was syntax-checked but not retrained or benchmarked during packaging. No trained checkpoint or dataset is bundled, so exact replay is not available from these files alone. The notebook contains the procedure needed to retrain when the data is supplied.
 
-## What is preserved?
-
-The notebook's code cells and outputs are unchanged from the supplied final experiment. Explanatory Markdown is added. Historical quirks (double shuffle, .data updates and a repeated forward definition) are documented rather than silently altered underneath recorded results.
-
 ## Credits and ownership
 
-The model follows the style of Andrej Karpathy's makemore educational work. Confirm the exact source/version and retain applicable upstream notices before publishing. The author ran the experiments and supplied their outputs. ChatGPT assisted with experiment design, folding implementation, interpretation and documentation. No claim of novel BatchNorm folding is made.
-
-No repository-wide software license is assigned in this package: verify source provenance and then select a compatible license. The dataset is not redistributed.
+The model follows the style of Andrej Karpathy's makemore educational work. Confirm the exact source/version and retain applicable upstream notices before publishing. The author ran the experiments and supplied their outputs. ChatGPT assisted with interpretation and documentation.
+Note:This is a beginners study and the code is very out of place.The experiment is more of a personal study but the results are easy to understand and interpret so more beginners like me can learn from this small experiment.The model architecture is very basic for the same reason. Enjoy!! 
